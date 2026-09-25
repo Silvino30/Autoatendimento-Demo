@@ -3061,7 +3061,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Etiqueta da versão. Serve para saber, em 3 segundos, se a página aberta
        no navegador é a última publicada: F12 → Console mostra a linha abaixo.  */
-    window.PORTAL_BUILD = "2026-09-18-b-demo";
+    window.PORTAL_BUILD = "2026-09-25-demo";
 
     /* =======================================================================
        MODO DEMONSTRAÇÃO — 18/09/2026
@@ -3078,7 +3078,13 @@ document.addEventListener("DOMContentLoaded", () => {
            há dado real trafegando nem no navegador nem no F12.
            Lista vazia = libera todos (volta a ser o portal comum).           */
         documentosPermitidos: [
-            "48619082809"
+            "900.000.001-75",       /* Teste 1 — dívida de alto valor          */
+            "TE.STE.001/A001-38",   /* Teste 2 — negociação (CNPJ alfanumérico)*/
+            "900.000.002-56",       /* Teste 3 — emissão de boleto             */
+            "99.900.004/0001-05"    /* Teste 4 — acordo formalizado            */
+            /* Para um teste interno seu, acrescente o documento aqui.
+               Pontuação é indiferente: a comparação ignora ponto, barra e
+               traço, e aceita o que o cliente digitar com ou sem máscara.   */
         ],
         avisoDocumento: "Este é um ambiente de demonstração. Use um dos documentos de teste enviados pela Quatro C.",
 
